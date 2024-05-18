@@ -1,5 +1,5 @@
 import React from 'react'
-import uuid from 'react-uuid';
+import { v4 as uuidv4 } from 'uuid'; 
 
 const TodoForm = ({ todos, setTodos }) => {
   const [title, setTitle] = useState(""); // Todo 제목 입력 상태
@@ -14,12 +14,12 @@ const TodoForm = ({ todos, setTodos }) => {
     }
 
     const todoId = {
-      id: uuid(), // uuid를 사용하여 고유한 id 생성
+      id: uuidv4(), // uuid를 사용하여 고유한 id 생성
       title,
       content,
       complete: false
     };
-    
+
     setTodos([...todos, todoId]);
 
     //Todo 작성 후 공백으로 변경
