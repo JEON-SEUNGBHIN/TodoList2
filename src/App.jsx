@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import TodoContainer from './components/TodoContainer';
 import './App.css'
 
 function App() {
@@ -10,7 +11,11 @@ function App() {
 
   return (
     <>
-        
+      <header>
+        <h1>Todo List</h1>
+        <img src='src/img/flower.png' alt='flower'/>
+      </header>
+      <TodoContainer todos={todos} setTodos={setTodos}/>
     </>
   )
 }
