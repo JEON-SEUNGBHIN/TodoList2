@@ -23,11 +23,19 @@ const TodoItem = ({ todo, todos, setTodos }) => {
       gap: '10px'
     };
 
+    // li btn css
+    const buttonContainerStyle = {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '10px', // 버튼 사이 간격 설정
+      marginTop: '10px'
+    };
+
   return (
     <li style={goalStyle}>
       <h3>{todo.title}</h3>
       <span>{todo.content}</span>
-      <div>
+      <div style={buttonContainerStyle}>
         <button onClick={() => removeGoal(todo.id)}>삭제하기</button>
         <button onClick={() => changeGoal(todo.id)} className={todo.complete ? 'incomplete-btn': 'complete-btn'}>
           {todo.complete ? "취소" : "완료"}
