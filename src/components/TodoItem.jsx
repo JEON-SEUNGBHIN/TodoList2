@@ -36,7 +36,7 @@ const TodoItem = ({ todo, todos, setTodos }) => {
       <h3>{todo.title}</h3>
       <span>{todo.content}</span>
       <div style={buttonContainerStyle}>
-        <button onClick={() => removeGoal(todo.id)}>삭제하기</button>
+        <button onClick={() => removeGoal(todo.id)} className='deletebtn'>삭제하기</button>
         <button onClick={() => changeGoal(todo.id)} className={todo.complete ? 'incomplete-btn': 'complete-btn'}>
           {todo.complete ? "취소" : "완료"}
         </button>

@@ -9,6 +9,7 @@ const goalsStyle = {
   padding: '1rem'
 };
 
+
 const TodoList = ({ todos, setTodos }) => {
   return (
     <div>
