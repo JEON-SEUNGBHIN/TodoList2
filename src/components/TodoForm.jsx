@@ -23,7 +23,7 @@ const TodoForm = ({ todos, setTodos }) => {
 
     setTodos([...todos, todoId]);
 
-    //Todo 작성 후 공백으로 변경
+    //Todo 작성 후 초기화
     setTitle("");
     setContent("");
   };

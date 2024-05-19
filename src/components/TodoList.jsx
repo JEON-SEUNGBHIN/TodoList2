@@ -15,14 +15,26 @@ const TodoList = ({ todos, setTodos }) => {
     <div>
       <h2>Working!!!🔥</h2>
       <ul style={goalsStyle}>
+         {/* 완료되지 않은 todo 항목들을 필터링하여 TodoItem 컴포넌트로 렌더링 */}
         {todos.filter(todo => !todo.complete).map((todo) => (
-          <TodoItem key={todo.id} todo={todo} todos={todos} setTodos={setTodos}/>
+          <TodoItem
+            key={todo.id} // 각 항목의 고유 id를 key로 설정하여 효율적인 렌더링
+            todo={todo} // 현재 todo 항목을 TodoItem 컴포넌트에 전달
+            todos={todos} // 전체 todo 리스트를 TodoItem 컴포넌트에 전달
+            setTodos={setTodos} // todo 리스트를 업데이트할 수 있는 함수 전달
+          />
         ))}
       </ul>
       <h2>Done😎</h2>
       <ul style={goalsStyle}>
+        {/* 완료된 todo 항목들을 필터링하여 TodoItem 컴포넌트로 렌더링 */}
         {todos.filter(todo => todo.complete).map((todo) => (
-          <TodoItem key={todo.id} todo={todo} todos={todos} setTodos={setTodos}/>
+          <TodoItem
+            key={todo.id}
+            todo={todo}
+            todos={todos}
+            setTodos={setTodos}
+          />
         ))}
       </ul>
     </div>
